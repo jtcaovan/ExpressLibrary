@@ -26,9 +26,7 @@ AuthorSchema
 });
 
 // Virtual for author's URL
-AuthorSchema
-.virtual('url')
-.get(function () {
+AuthorSchema.virtual('url').get(function () {
   return '/catalog/author/' + this._id;
 });
 
